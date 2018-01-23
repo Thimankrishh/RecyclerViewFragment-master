@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68dp" >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="62dp"
+        android:onClick="Card"
+        card_view:cardCornerRadius="4dp"
+        card_view:elevation="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/abc_btn_radio_material">
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="100dp"
+                android:layout_toRightOf="@id/iv_image"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_toRightOf ="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="12"
+                android:layout_height="wrap_content"
+                 >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_blah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Id"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/tv_text"
+                android:layout_toRightOf="@+id/iv_image"
+                android:layout_toEndOf="@+id/iv_image">
+            </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="100dp"
+                android:layout_toRightOf="@id/ll1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="6"
+                    android:layout_height="wrap_content"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_blah1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No of Rooms"
+                    android:layout_margin="5dp">
+                    <!--android:layout_toRightOf="@+id/iv_image"-->
+                    <!--android:layout_toEndOf="@+id/iv_image">-->
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@id/ll2"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/ll2"
+                android:layout_marginLeft="5dp"
+                android:hint="10$"
+
+                android:layout_height="wrap_content"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_blah2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ll2"
+                android:layout_alignBottom="@id/ll2"
+                android:text="Price"
+                android:layout_margin="5dp">
+                <!--android:layout_toRightOf="@+id/iv_image"-->
+                <!--android:layout_toEndOf="@+id/iv_image">-->
+            </TextView>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
