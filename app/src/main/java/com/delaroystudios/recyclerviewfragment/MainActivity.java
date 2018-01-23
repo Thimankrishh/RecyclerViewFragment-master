@@ -104,15 +104,15 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new BlankFragment();
                 case 1:
-                    return new BlankFragment();
+                    return new FragmentOne();
                 case 2:
                     return new BlankFragment();
                 case 3:
-                    return new BlankFragment();
+                    return new FragmentTwo();
                 case 4:
                     return new BlankFragment();
                 case 5:
-                    return new BlankFragment();
+                    return new FragmentTwo();
             }
 
             return null;

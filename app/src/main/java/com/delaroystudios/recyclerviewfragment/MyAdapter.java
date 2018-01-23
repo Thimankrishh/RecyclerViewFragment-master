@@ -14,24 +14,30 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private String[] mDataset;
     private String[] noOfRooms;
+    private String[] price;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         public CardView mCardView;
-        public TextView mTextView;
-        public TextView mTextView1;
+        public TextView roomId;
+        public TextView noOfRoom;
+        public TextView roomPrice;
         public MyViewHolder(View v){
             super(v);
 
             mCardView = (CardView) v.findViewById(R.id.card_view);
-            mTextView = (TextView) v.findViewById(R.id.tv_text);
-            mTextView1 = (TextView) v.findViewById(R.id.tv_text1);
+            roomId = (TextView) v.findViewById(R.id.tv_text);
+            noOfRoom = (TextView) v.findViewById(R.id.tv_text1);
+            roomPrice = (TextView)v.findViewById((R.id.tv_text2));
 
         }
 
     }
 
-    public MyAdapter(String[] myDataset, String[] noOfRooms){
+
+
+    public MyAdapter(String[] myDataset, String[] noOfRooms,String[] price){
         this.noOfRooms = noOfRooms;
+        this.price = price;
         mDataset = myDataset;
     }
 
@@ -44,8 +50,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position){
-        holder.mTextView.setText(mDataset[position]);
-        holder.mTextView1.setText(noOfRooms[position]);
+        holder.roomId.setText(mDataset[position]);
+        holder.noOfRoom.setText(noOfRooms[position]);
+        holder.roomPrice.setText(price[position]);
+
     }
 
     @Override
